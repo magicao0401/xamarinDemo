@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Demo1.App">
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+          <ResourceDictionary>
+            <Style x:Key="LoginBtnStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="Teal" />
+                <Setter Property="Margin" Value="0,10"/>
+                <Setter Property="BorderRadius" Value="20"/>
+            </Style>
+            
+             <Style x:Key="LoginBtn2Style" TargetType="Button" BasedOn="{StaticResource LoginBtnStyle}">
+
+                <Setter Property="BackgroundColor" Value="red" />
+             
+            </Style>
+            
+            <Style TargetType="Entry">
+              
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="TextColor" Value="#FFA000" />
+                     </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

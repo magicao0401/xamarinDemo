@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Demo1" x:Class="Demo1.Demo1Page">
+<ContentPage.Resources>
+      
+    </ContentPage.Resources>
+     <Grid >
+        <Image Grid.Row="0" Source="bg" Aspect="AspectFill" />
+        <Grid Margin="5">
+             <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+    <Label Grid.Row="0" Text="Logo" HorizontalOptions="Center" HeightRequest="50" Margin="0, 50" FontSize="Large" TextColor="White"/>
+
+    <Label Grid.Row="1" Text="Account" TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" />
+    <Entry Grid.Row="2" Text="{Binding Account}" Placeholder="account" />
+
+    <Label Grid.Row="3" Text="Account" TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="8*" />
+                </Grid.ColumnDefinitions>
+                 <Entry  Placeholder="account" />
+                <Entry Grid.Column="1" Placeholder="aa" x:Name="EntryTel" />
+            </Grid>
+   
+    <StackLayout Grid.Row="5">
+         <Button  Text="Login" Style="{StaticResource LoginBtnStyle}"  />
+                 <Button  Text="Reg" Style="{StaticResource LoginBtn2Style}"  />
+         <Label Text="{Binding Account}"  TextColor="White"/>
+    </StackLayout>
+  </Grid>
+</Grid>
+</ContentPage>
